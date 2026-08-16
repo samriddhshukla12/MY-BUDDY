@@ -14,7 +14,41 @@ from memory import embed_text, search_notes
 from ai import ask_anything, ask_my_notes, recall_summary, generate_story
 
 # --- Setup ---
-st.set_page_config(page_title="Second Brain + Story Engine", page_icon="🧠")
+# --- Custom header with signature styling (My Buddy) ---
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.my-buddy-header {
+    background: #ffffff;
+    padding: 32px 20px 40px;
+    text-align: center;
+    border-bottom: 3px solid #A32D2D;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+.my-buddy-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #791F1F;
+    margin: 0;
+}
+.my-buddy-signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 26px;
+    color: #791F1F;
+    margin-top: 2px;
+    display: inline-block;
+    transform: rotate(-4deg);
+}
+</style>
+
+<div class="my-buddy-header">
+    <p class="my-buddy-title">🧠 My Buddy</p>
+    <p class="my-buddy-signature">Samriddh's helping hand</p>
+</div>
+""", unsafe_allow_html=True)
+# --- End custom header ---
 init_db()  # make sure the database file/table exists
 
 st.title("🧠MY BUDDY")
