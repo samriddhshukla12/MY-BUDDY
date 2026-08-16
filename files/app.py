@@ -71,7 +71,7 @@ st.markdown("""
     margin-top: 2px;
     display: inline-block;
     transform: rotate(-4deg);
-}
+} [data-testid="stAppViewContainer"], [data-testid="stMain"], .main, section.main, [data-testid="block-container"] { transform: none !important; }
 /* Make body text readable over the dark background */
 p, label, .stMarkdown, [data-testid="stMarkdownContainer"] {
     color: #E0FFE9 !important;
