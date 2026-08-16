@@ -14,7 +14,85 @@ from memory import embed_text, search_notes
 from ai import ask_anything, ask_my_notes, recall_summary, generate_story
 
 # --- Setup ---
-# --- Custom header with signature styling (My Buddy) ---
+# --- Matrix rain background ---
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Matrix rain background */
+.matrix-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000000;
+    overflow: hidden;
+    z-index: -1;
+}
+.matrix-column {
+    position: absolute;
+    top: -100%;
+    font-family: monospace;
+    font-size: 18px;
+    color: #00FF41;
+    text-shadow: 0 0 8px #00FF41;
+    line-height: 1.1;
+    white-space: nowrap;
+    animation: matrix-fall linear infinite;
+    opacity: 0.75;
+}
+@keyframes matrix-fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200vh); }
+}
+
+/* Make Streamlit's own background transparent so the rain shows through */
+[data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+    background: transparent;
+}
+.my-buddy-header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 32px 20px 40px;
+    text-align: center;
+    border-bottom: 3px solid #00FF41;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+.my-buddy-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00FF41;
+    margin: 0;
+    text-shadow: 0 0 10px #00FF41;
+}
+.my-buddy-signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 26px;
+    color: #00FF41;
+    margin-top: 2px;
+    display: inline-block;
+    transform: rotate(-4deg);
+}
+/* Make body text readable over the dark background */
+p, label, .stMarkdown, [data-testid="stMarkdownContainer"] {
+    color: #E0FFE9 !important;
+}
+</style>
+
+<div class="matrix-bg">
+""" + "".join([
+    f'<div class="matrix-column" style="left:{i*2.5}%; animation-duration:{6 + (i % 7)}s; animation-delay:{(i % 5) * 0.7}s;">'
+    + "".join([chr(0x30A0 + (i * 7 + j) % 96) + "<br>" for j in range(30)])
+    + "</div>"
+    for i in range(40)
+]) + """
+</div>
+
+<div class="my-buddy-header">
+    <p class="my-buddy-title">🧠 My Buddy</p>
+    <p class="my-buddy-signature">Samriddh's helping hand</p>
+</div>
+""", unsafe_allow_html=True)
+# --- End Matrix background + header ---
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
