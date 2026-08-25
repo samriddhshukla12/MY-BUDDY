@@ -58,8 +58,8 @@ st.markdown("""
 }
 .my-buddy-signature {
     font-family: 'Great Vibes', cursive;
-    font-size: 26px;
-    color: #00FF41;
+    font-size: 34px;
+    color: #00FF41;font-size: 18px !importan;
     margin-top: 2px;
     display: inline-block;
     transform: rotate(-4deg);
