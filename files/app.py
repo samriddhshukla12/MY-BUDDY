@@ -97,9 +97,34 @@ p, label, .stMarkdown, [data-testid="stMarkdownContainer"] {
 # --- End custom header ---
 init_db()  # make sure the database file/table exists
 
-st.title("🧠MY BUDDY")
+st.title("🧠MY BUDDY 
+by Samriddh Shukla ")
 
 # --- Sidebar: mode selector ---
+# --- Quick Start Guide (sidebar) ---
+with st.sidebar.expander("📖 Quick Start Guide", expanded=False):
+    st.markdown("""
+    **Welcome to My Buddy!** Here's how to use each mode:
+
+    **➕ Add a Note**
+    Save a thought, idea, or journal entry. This is your memory bank — everything else pulls from what you save here.
+
+    **💬 Ask Anything**
+    General questions, no memory involved. Works like a normal AI assistant.
+
+    **📓 Ask My Notes**
+    Ask a question and get an answer based ONLY on your saved notes.
+
+    **🔍 Recall**
+    Jog your memory — e.g. "what was I thinking about last month?"
+
+    **✍️ Story Mode**
+    Turns your own notes into a short story, using a theme, object, and mood pulled from what you've written.
+
+    ---
+    *Tip: Start by adding a few notes, then try the other modes on them!*
+    """)
+# --- End Quick Start Guide ---
 mode = st.sidebar.radio(
     "Choose a mode:",
     ["➕ Add a Note", "💬 Ask Anything", "📓 Ask My Notes", "🔍 Recall", "✍️ Story Mode"]
