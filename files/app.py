@@ -50,7 +50,7 @@ st.markdown("""
     box-shadow: 0 0 30px rgba(0,255,65,0.35);
 }
 .my-buddy-title {
-    font-size: 34px;
+    font-size: 48px;
     font-weight: 700;
     color: #00FF41;
     margin: 0;
