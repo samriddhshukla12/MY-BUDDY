@@ -60,13 +60,15 @@ st.markdown("""
 .my-buddy-signature {
     font-family: 'Great Vibes', cursive;
     font-size: 34px;
-    color: #00FF41;font-size: 18px !importan;
+    color: #00FF41;
+    font-size: 18px !importan;
     margin-top: 2px;
     display: inline-block;
     transform: rotate(-4deg);
 }
 p, label, .stMarkdown, [data-testid="stMarkdownContainer"] {
     color: #E0FFE9 !important;
+    font-size: 18px !important;
 }
 /* Give text content a subtle dark backing so it stays crisp over the rain */
 [data-testid="stVerticalBlock"] > div {
