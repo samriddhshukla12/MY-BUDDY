@@ -84,7 +84,7 @@ p, label, .stMarkdown, [data-testid="stMarkdownContainer"] {
 # --- End custom header ---
 init_db()  # make sure the database file/table exists
 
-st.title("🧠MY BUDDY by Samriddh Shukla ")
+
 
 # --- Sidebar: mode selector ---
 # --- Quick Start Guide (sidebar) ---
