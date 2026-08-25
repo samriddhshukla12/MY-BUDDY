@@ -53,6 +53,7 @@ st.markdown("""
     font-size: 48px;
     font-weight: 700;
     color: #00FF41;
+    font-size: 18px !important;
     margin: 0;
     text-shadow: 0 0 10px #00FF41;
 }
